@@ -30,7 +30,8 @@ def hello_world():
     querystring1 = int(querystring)
     
     dynamodb = boto3.resource('dynamodb')
-    table = dynamodb.Table('testapp2-test-api-countries')
+    table = dynamodb.Table('python-flask-copilot-test-api2-countries')
+
 
     response = table.get_item(
         Key={
