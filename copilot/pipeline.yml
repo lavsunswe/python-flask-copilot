@@ -15,7 +15,7 @@ source:
   # has the following properties: repository, branch.
   properties:
     access_token_secret: github-token-python-flask-copilot-python-flask-copilot
-    branch: main
+    branch: master
     repository: https://github.com/lavsunswe/python-flask-copilot
 
 # The deployment section defines the order the pipeline will deploy

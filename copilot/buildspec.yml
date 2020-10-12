@@ -42,7 +42,7 @@ phases:
             tmp=$(mktemp)
             timestamp=$(date +%s)
             aws s3 cp "$ADDONSFILE" "s3://stackset-python-flask-co-pipelinebuiltartifactbuc-dztwq0t9skoc/manual/$timestamp/$svc.addons.stack.yml";
-            jq --arg a "https://stackset-python-flask-co-pipelinebuiltartifactbuc-dztwq0t9skoc.s3.amazonaws.com/manual/1602498518/api2.addons.stack.yml" '.Parameters.AddonsTemplateURL = $a' ./infrastructure/$svc-python-flask-copilot-test.params.json > "$tmp" && mv "$tmp" ./infrastructure/$svc-python-flask-copilot-test.params.json
+            jq --arg a "https://stackset-python-flask-co-pipelinebuiltartifactbuc-dztwq0t9skoc.s3-us-east-1.amazonaws.com/manual/$timestamp/$svc.addons.stack.yml" '.Parameters.AddonsTemplateURL = $a' ./infrastructure/$svc-python-flask-copilot-test.params.json > "$tmp" && mv "$tmp" ./infrastructure/$svc-python-flask-copilot-test.params.json
           fi
         done;
       # Build images
