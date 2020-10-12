@@ -22,7 +22,7 @@ cors = CORS(app)
 @app.route('/web', methods = ['GET', 'POST'])
 def hello_world():    
     if request.method == 'POST':
-        r = requests.get('http://api2.python-flask-copilot.local:8000/api2?ID=1')
+        r = requests.get('http://api2.python-flask-copilot.local:8000?ID=1')
 
          
 
