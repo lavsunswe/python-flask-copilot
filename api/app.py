@@ -22,15 +22,14 @@ app = Flask(__name__)
 cors = CORS(app)
 
 
-
-@app.route('/api')
+@app.route('/')
 
 def hello_world():
     querystring = request.args.get("ID", "")
     querystring1 = int(querystring)
     
     dynamodb = boto3.resource('dynamodb')
-    table = dynamodb.Table('python-flask-copilot-test-api2-countries')
+    table = dynamodb.Table('python-flask-copilot-python-flask-copilot-test-api2-countries')
 
 
     response = table.get_item(
